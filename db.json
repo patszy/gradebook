@@ -1,0 +1,154 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "name": "James Smith",
+        "phone": "2350 1367",
+        "email": "james_smith@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 1,
+            "his": 3,
+            "phy": 4,
+            "che": 5,
+            "pe": 5
+        }
+      },
+      {
+        "id": 2,
+        "name": "William Taylor",
+        "phone": "0835 6456",
+        "email": "will_taylor@gmail.com",
+        "grades": {
+            "math": 3,
+            "bio": 1,
+            "eng": 2,
+            "his": 3,
+            "phy": 4,
+            "che": 1,
+            "pe": 5
+        }
+      },
+      {
+        "id": 3,
+        "name": "Scarlett Evans",
+        "phone": "7896 1324",
+        "email": "scarlett_evans@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 3,
+            "his": 3,
+            "phy": 4,
+            "che": 5,
+            "pe": 1
+        }
+      },
+      {
+        "id": 4,
+        "name": "Jack Roberts",
+        "phone": "0143 7457",
+        "email": "jack_roberts@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 3,
+            "eng": 3,
+            "his": 3,
+            "phy": 4,
+            "che": 2,
+            "pe": 2
+        }
+      },
+      {
+        "id": 5,
+        "name": "Ivy Duck",
+        "phone": "9870 3218",
+        "email": "ivy_duck@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 5,
+            "eng": 5,
+            "his": 3,
+            "phy": 4,
+            "che": 5,
+            "pe": 5
+        }
+      },
+      {
+        "id": 6,
+        "name": "Ashley Iron",
+        "phone": "3246 5708",
+        "email": "ashley_iron@gmail.com",
+        "grades": {
+            "math": 5,
+            "bio": 5,
+            "eng": 5,
+            "his": 5,
+            "phy": 5,
+            "che": 5,
+            "pe": 2
+        }
+      },
+      {
+        "id": 7,
+        "name": "Brooke Walker",
+        "phone": "0324 8040",
+        "email": "brooke_walker@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 1,
+            "his": 3,
+            "phy": 2,
+            "che": 2,
+            "pe": 5
+        }
+      },
+      {
+        "id": 8,
+        "name": "Cooper Man",
+        "phone": "9971 2346",
+        "email": "cooper_man@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 1,
+            "his": 1,
+            "phy": 4,
+            "che": 3,
+            "pe": 5
+        }
+      },
+      {
+        "id": 9,
+        "name": "Landon Miles",
+        "phone": "0987 6543",
+        "email": "landon_miles@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 1,
+            "his": 3,
+            "phy": 3,
+            "che": 5,
+            "pe": 3
+        }
+      },
+      {
+        "id": 10,
+        "name": "James Bell",
+        "phone": "2109 1234",
+        "email": "james_bell@gmail.com",
+        "grades": {
+            "math": 2,
+            "bio": 1,
+            "eng": 1,
+            "his": 3,
+            "phy": 4,
+            "che": 2,
+            "pe": 1
+        }
+      }
+    ]
+  }
