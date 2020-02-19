@@ -62,9 +62,9 @@ tbody tr td:hover {
 }
 
 .wrong {
-    border-bottom: 1px solid #c23616;
+    border-bottom: 1px solid #e84118;
 }
 
 .good {
-    border-bottom: 1px solid #44bd32;
+    border-bottom: 1px solid #4cd137;
 }
