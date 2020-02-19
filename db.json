@@ -87,7 +87,7 @@
             "his": 5,
             "phy": 5,
             "che": 5,
-            "pe": 2
+            "pe": 4
         }
       },
       {
@@ -111,13 +111,13 @@
         "phone": "9971 2346",
         "email": "cooper_man@gmail.com",
         "grades": {
-            "math": 2,
+            "math": 1,
             "bio": 1,
             "eng": 1,
             "his": 1,
-            "phy": 4,
-            "che": 3,
-            "pe": 5
+            "phy": 1,
+            "che": 1,
+            "pe": 2
         }
       },
       {
@@ -144,8 +144,8 @@
             "math": 2,
             "bio": 1,
             "eng": 1,
-            "his": 3,
-            "phy": 4,
+            "his": 1,
+            "phy": 1,
             "che": 2,
             "pe": 1
         }
