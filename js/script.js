@@ -92,7 +92,7 @@ window.onload = () => {
     const studentsTab = [];
 
     getData().then((data) => {
-        data.map((item) => {
+        data.map(item => {
             let values = Object.values(item.grades);
 
             let grades = new Grades(values[0], values[1], values[2], values[3], values[4], values[5], values[6]);
@@ -104,5 +104,27 @@ window.onload = () => {
 
         drawTableHead(studentsTab);
         drawTableBody(studentsTab);
+
+        document.querySelector('input').addEventListener('keyup', (event) => {
+            let filteredTab = [];
+            let inputValue = document.querySelector('input').value;
+
+            studentsTab.map(student => {
+                if(student.name.toLowerCase().includes(inputValue.toLowerCase())) filteredTab.push(student);
+                else {
+                    // let gradesTab = Object.values(student.grades);
+
+                    // gradesTab.map(grade => {
+                    //     if(grade.toString().includes(inputValue))
+                    //     console.log(grade);
+                    //     filteredTab.push(student);
+                        
+                    // });
+                }
+            });
+
+            document.querySelector('tbody').innerHTML = '';
+            drawTableBody(filteredTab);
+        });
     });
 };
