@@ -1,5 +1,6 @@
 :root {
-    --main-color: rgba(0, 0, 0, 0.3);
+    --main-color: rgba(0, 0, 0, 0.2);
+    --main-text-color: #ccc;
 }
 
 * {
@@ -15,33 +16,71 @@ body {
     margin: 0;
     background: linear-gradient(45deg, #49a09d, #5f2c82);
     background-attachment: fixed;
-    color: #ccc;
+    color: var(--main-text-color);
     text-align: center;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px var(--main-color);
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px var(--main-color);
+    background-image: -webkit-linear-gradient(top, #49a09d 0%, #5f2c82 100%);
+}
+
+.table {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 table,
 h1 {
-    background-color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+input {
+    border: 0;
+    background-color: transparent;
+    color: var(--main-text-color);
+    align-self: flex-end;
+    border-bottom: 1px solid #3498db;
+}
+
+input::placeholder {
+    color: var(--main-text-color);
 }
 
 table {
-    box-shadow: 0 0 20px var(--main-color);
-    margin: 0 auto;
-    margin-top: 100px;
+    width: 100%;
     padding: 20px;
     border-spacing: 0;
+    margin-top: 20px;
 }
 
 h1 {
     font-size: 1.5rem;
-    width: 200px;
-    margin: 0 auto;
     text-shadow: 5px 3px 1px var(--main-color);
-    padding: 20px 30px;
+    margin: 0;
+    align-self: flex-end;
 }
 
 th,
-td {
+td,
+h1,
+input {
     padding: 10px 30px;
 }
 
@@ -52,7 +91,7 @@ th {
 
 th:first-child,
 th:last-child {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 tbody tr:hover,

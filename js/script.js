@@ -102,8 +102,7 @@ window.onload = () => {
             studentsTab.push(student);
         });
 
-        drawTableBody(studentsTab);
         drawTableHead(studentsTab);
-
+        drawTableBody(studentsTab);
     });
 };
