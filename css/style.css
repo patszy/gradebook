@@ -25,12 +25,10 @@ h1 {
 
 table {
     box-shadow: 0 0 20px var(--main-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    margin-top: 100px;
     padding: 20px;
-    border-spacing: 0px;
+    border-spacing: 0;
 }
 
 h1 {
@@ -61,10 +59,10 @@ tbody tr td:hover {
     background-color: var(--main-color);
 }
 
-.wrong {
+.wrong > td {
     border-bottom: 1px solid #c23616;
 }
 
-.good {
+.good > td {
     border-bottom: 1px solid #44bd32;
 }

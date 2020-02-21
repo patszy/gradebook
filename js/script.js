@@ -14,18 +14,18 @@ const getData = async () => {
 const drawTableHead = (tab) => {
     let tHead = document.querySelector('thead');
     let tr = document.createElement('tr'), th;
-
-    let key =  Object.keys(tab[0]);
+    let keysTab = Object.keys(tab[0]);
+    let gradesTab = Object.keys(tab[0].grades);
 
     th = document.createElement('th');
-    th.innerText = `${key[0]}`.toUpperCase();
+    th.innerText = `${keysTab[0]}`.toUpperCase();
     tr.appendChild(th);
 
-    for(let gradeKey in tab[0][key[key.length-1]]){
+    gradesTab.map(item => {
         th = document.createElement('th');
-        th.innerText = `${gradeKey}`.toUpperCase();
+        th.innerText = `${item}`.toUpperCase();
         tr.appendChild(th);
-    }
+    });
 
     tHead.appendChild(tr);
 }
@@ -48,8 +48,8 @@ const drawTableBody = (tab) => {
             tr.appendChild(td);
         }
 
-        if(grades['avg'] < 2) td.classList.add('wrong');
-        if(grades['avg'] > 4.75) td.classList.add('good');
+        (grades['avg'] < 2) ? tr.classList.add('wrong') : false;
+        (grades['avg'] > 4.75) ? tr.classList.add('good') : false;
 
         tBody.appendChild(tr);
     });
