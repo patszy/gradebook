@@ -11,7 +11,7 @@ const getData = async () => {
     }
 };
 
-const drawTableHead = (tab) => {
+const drawTableHead = tab => {
     let tHead = document.querySelector('thead');
     let tr = document.createElement('tr'), th;
     let keysTab = Object.keys(tab[0]);
@@ -30,7 +30,7 @@ const drawTableHead = (tab) => {
     tHead.appendChild(tr);
 }
 
-const drawTableBody = (tab) => {
+const drawTableBody = tab => {
     let tBody = document.querySelector('tbody');
     let tr, td;
 
@@ -53,6 +53,27 @@ const drawTableBody = (tab) => {
 
         tBody.appendChild(tr);
     });
+}
+
+const search = tab => {
+    let filteredTab = [];
+    let inputValue = document.querySelector('input').value;
+
+    tab.map(student => {
+        if(student.name.toLowerCase().includes(inputValue.toLowerCase())) filteredTab.push(student);
+        else if(!isNaN(inputValue)) {
+            let gradesTab = Object.values(student.grades);
+
+            for(let i=0; i<gradesTab.length; i++){
+                if(Math.round(parseFloat(inputValue)).toString() >= Math.round(parseFloat(gradesTab[i])).toString()) {
+                    filteredTab.push(student);
+                    break;
+                }
+            }
+        }
+    });
+
+    return filteredTab;
 }
 
 class Grades{
@@ -105,23 +126,8 @@ window.onload = () => {
         drawTableHead(studentsTab);
         drawTableBody(studentsTab);
 
-        document.querySelector('input').addEventListener('keyup', (event) => {
-            let filteredTab = [];
-            let inputValue = document.querySelector('input').value;
-
-            studentsTab.map(student => {
-                if(student.name.toLowerCase().includes(inputValue.toLowerCase())) filteredTab.push(student);
-                else {
-                    // let gradesTab = Object.values(student.grades);
-
-                    // gradesTab.map(grade => {
-                    //     if(grade.toString().includes(inputValue))
-                    //     console.log(grade);
-                    //     filteredTab.push(student);
-                        
-                    // });
-                }
-            });
+        document.querySelector('input').addEventListener('keyup', () => {
+            let filteredTab = search(studentsTab);
 
             document.querySelector('tbody').innerHTML = '';
             drawTableBody(filteredTab);
