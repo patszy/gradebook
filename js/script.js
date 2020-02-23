@@ -119,6 +119,8 @@ window.onload = () => {
             studentsTab.push(student);
         });
 
+        document.getElementsByClassName('loader')[0].style.display = 'none';
+
         drawTableHead(studentsTab);
         drawTableBody(studentsTab);
 
