@@ -55,21 +55,17 @@ const drawTableBody = tab => {
     });
 }
 
-const search = tab => {
+const search = (tab, event) => {
     let filteredTab = [];
-    let inputValue = document.querySelector('input').value;
+    let inputValue = event.target.value;
+
+    if(inputValue == "") return tab;
 
     tab.map(student => {
-        if(student.name.toLowerCase().includes(inputValue.toLowerCase())) filteredTab.push(student);
-        else if(!isNaN(inputValue)) {
-            let gradesTab = Object.values(student.grades);
-
-            for(let i=0; i<gradesTab.length; i++){
-                if(Math.round(parseFloat(inputValue)).toString() >= Math.round(parseFloat(gradesTab[i])).toString()) {
-                    filteredTab.push(student);
-                    break;
-                }
-            }
+        if(isNaN(inputValue)) {
+            if(student.name.toLowerCase().includes(inputValue.toLowerCase())) filteredTab.push(student);
+        } else {
+            if(Math.round(inputValue) == Math.round(student.grades.avg)) filteredTab.push(student);
         }
     });
 
@@ -126,11 +122,9 @@ window.onload = () => {
         drawTableHead(studentsTab);
         drawTableBody(studentsTab);
 
-        document.querySelector('input').addEventListener('keyup', () => {
-            let filteredTab = search(studentsTab);
-
+        document.querySelector('input').addEventListener('keyup', (event) => {
             document.querySelector('tbody').innerHTML = '';
-            drawTableBody(filteredTab);
+            drawTableBody( search(studentsTab, event) );
         });
     });
 };
