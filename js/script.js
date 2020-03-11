@@ -120,6 +120,7 @@ window.onload = () => {
         });
 
         document.getElementsByClassName('loader')[0].style.display = 'none';
+        document.getElementsByClassName('table')[0].style.display = 'flex';
 
         drawTableHead(studentsTab);
         drawTableBody(studentsTab);
